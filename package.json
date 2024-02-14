@@ -154,7 +154,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged && pwd && chmod 755 ./.husky/check-branch-name.sh && ./.husky/husky.sh"
+      "pre-commit": "lint-staged && pwd && chmod 755 ./.husky/check-branch-name.sh && ./.husky/pre-commit"
     }
   }
 }
