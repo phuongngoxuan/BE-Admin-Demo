@@ -1,4 +1,4 @@
-#  "pepper-fI-backend"
+#  "Back End Demo"
 
 ## Description
 mineraland backend
@@ -53,52 +53,6 @@ run seeder token:
 ```
 yarn console:dev seeder-token
 yarn console:dev seeder-user
-```
-
-## run crawler
-start server :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Be" "yarn start:dev" 
-```
-
-run crawl pool-bsc-factory :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Bsc-Pool-Factory" "yarn console:dev crawl-bsc-factory" --exp-backoff-restart-delay=100
-```
-
-run crawl pool-kcc-factory :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Kcc-Pool-Factory" "yarn console:dev crawl-kcc-factory" --exp-backoff-restart-delay=100
-```
-
-run crawl-linear-bsc-pool :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Bsc-Pool" "yarn console:dev crawl-bsc-pools" --exp-backoff-restart-delay=100
-```
-
-run crawl-linear-kcc-pool :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Kcc-Pool" "yarn console:dev crawl-kcc-pools" --exp-backoff-restart-delay=100
-```
-
-run crawl allocation-bsc-pool :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Bsc-Pool-Allocation" "yarn console:dev crawl-bsc-allocation-pool" --exp-backoff-restart-delay=100
-```
-
-run crawl allocation-kcc-pool :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Kcc-Pool-Allocation" "yarn console:dev crawl-kcc-allocation-pool" --exp-backoff-restart-delay=100
-```
-
-run crawl-token-info :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Token" "yarn console:dev crawl-token-info" --exp-backoff-restart-delay=100
-```
-
-run crawl-token-price :
-```bash 
-pm2 start -n "Astrone-Pepperfi-Crawl-Token" "yarn console:dev crawl-token-price" --exp-backoff-restart-delay=100
 ```
 
 Powered by [Nest](https://github.com/nestjs/nest)

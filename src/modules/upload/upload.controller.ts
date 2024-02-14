@@ -68,7 +68,7 @@ export class UploadController {
     }),
   )
   uploadImage(@UploadedFile() file: Express.Multer.File): { filename: string; url: string } {
-    const url = process.env.APP_DOMAIN + '/' + process.env.APP_PREFIX + '/upload/' + file.filename;
+    const url = 'upload/' + file.filename;
     return { filename: file.filename, url };
   }
 
