@@ -17,7 +17,7 @@ import { ResPagingDto } from 'src/shares/dtos/pagination.dto';
 export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
 
-  async createUser(createUserDto: CreateUserDto) {
+  async createUser(createUserDto: CreateUserDto): Promise<User> {
     const { password } = createUserDto;
     // const user = await this.userModel.findOne({ email });
     // if (user) {
