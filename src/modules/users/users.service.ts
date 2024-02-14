@@ -17,8 +17,8 @@ import { ResPagingDto } from 'src/shares/dtos/pagination.dto';
 export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
 
-  async createUser(createUserDto: CreateUserDto): Promise<any> {
-    const { email, password } = createUserDto;
+  async createUser(createUserDto: CreateUserDto) {
+    const { password } = createUserDto;
     // const user = await this.userModel.findOne({ email });
     // if (user) {
     //   throw new BadRequestException(httpErrors.ACCOUNT_EXISTED);
@@ -34,7 +34,6 @@ export class UsersService {
 
   async findAll(param: GetUsersDto): Promise<ResPagingDto<User[]>> {
     const { sort, page, limit } = param;
-    console.log("in7")
 
     const query: any = {};
     query.deleted = false;
