@@ -34,7 +34,7 @@ export class UsersService {
 
   async findAll(param: GetUsersDto): Promise<ResPagingDto<User[]>> {
     const { sort, page, limit } = param;
-    console.log("in6")
+    console.log("in7")
 
     const query: any = {};
     query.deleted = false;
